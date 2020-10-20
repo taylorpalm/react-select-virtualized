@@ -1,15 +1,16 @@
 import React, { forwardRef, memo, Fragment, useMemo, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import ReactSelect from 'react-select';
-import ReactAsync from 'react-select/async';
-import ReactSelectCreatableSelect from 'react-select/creatable';
-import ReactSelectAsyncCreatableSelect from 'react-select/async-creatable';
+import ReactAsync from 'react-select/lib/Async';
+import ReactSelectCreatableSelect from 'react-select/lib/Creatable';
+import ReactSelectAsyncCreatableSelect from 'react-select/lib/AsyncCreatable';
 import { mapLowercaseLabel, getFilteredItems } from '@rsv-lib/utils';
 import { calculateTotalGroupedListSize } from '@rsv-lib/utils';
 import { optionsPropTypes } from '@rsv-lib/prop-types';
 import { useDebouncedCallback } from '@rsv-hooks/use-debaunced-callback';
 import { buildErrorText } from '@rsv-lib/error';
 
+ 
 const LAG_INDICATOR = 1000;
 
 const loadingMessage = () => <div>...</div>;
